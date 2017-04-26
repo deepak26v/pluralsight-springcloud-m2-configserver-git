@@ -1,0 +1,24 @@
+server:
+  port: 9090
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/deepak26v/pluralsight-spring-cloudconfig-wa-tolls
+          username: deepak26v
+          password: timeline123
+          search-paths: 'station*'
+          repos:
+            perf:
+              pattern: "*/perf"
+              uri: https://github.com/deepak26v/pluralsight-spring-cloudconfig-wa-tolls-perf
+              search-paths: 'station*'
+security:
+  basic:
+    enabled: true
+  user:
+    password: pluralsight
+    name: pluralsight
